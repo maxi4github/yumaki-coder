@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600&family=Inter:wght@300&family=Open+Sans:wght@300;400;500;600&family=Quicksand:wght@300&family=Ubuntu:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Inter:wght@300&family=Open+Sans:wght@300;400;500;600&family=Quicksand:wght@300&family=Ubuntu:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.header-index {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 800px;
+  background-image: url("../img/CENTRODEPORTIVO-SONORANORTE.jpg");
+  background-position: center;
+  background-attachment: fixed; }
+  .header-index .titulo-principal {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    color: aliceblue;
+    position: sticky;
+    top: 0; }
+    .header-index .titulo-principal .titulo {
+      color: aliceblue;
+      text-decoration: none;
+      font-size: 40px;
+      padding: 10px;
+      font-family: "DynaPuff", cursive;
+      transition: 0.1s; }
+      .header-index .titulo-principal .titulo:hover {
+        transform: scale(1.1); }
+      .header-index .titulo-principal .titulo img {
+        width: 40px; }
+    .header-index .titulo-principal .ingresar {
+      margin: 20px;
+      text-decoration: none;
+      background-color: aliceblue;
+      color: black;
+      padding: 9px;
+      font-size: large;
+      border-radius: 9px;
+      transition: 0.1s; }
+      .header-index .titulo-principal .ingresar:hover {
+        color: black;
+        transform: scale(1.1); }
+  .header-index .hero {
+    color: aliceblue;
+    margin-top: 4rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%; }
+    .header-index .hero h2 {
+      font-size: 60px;
+      font-family: "DynaPuff", cursive; }
+  .header-index p {
+    font-size: 20px;
+    font-family: "DynaPuff", cursive; }
+
+header .navbar nav .container-fluid {
+  display: flex;
+  justify-content: space-between; }
+  header .navbar nav .container-fluid .navbar-brand {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 40px;
+    padding: 10px;
+    font-family: "DynaPuff", cursive;
+    transition: 0.1s; }
+    header .navbar nav .container-fluid .navbar-brand:hover {
+      transform: scale(1.1); }
+    header .navbar nav .container-fluid .navbar-brand img {
+      width: 40px; }
+    header .navbar nav .container-fluid .navbar-brand .navbar-text:hover {
+      color: black;
+      transform: scale(1.1); }
+    header .navbar nav .container-fluid .navbar-brand .navbar-text a {
+      text-decoration: none; }

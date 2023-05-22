@@ -252,38 +252,6 @@ main {
         font-weight: 500px;
         font-weight: 600;
     }
-
-    .barra-busqueda {
-        margin-left: 25px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        padding: 8px;
-        visibility: hidden;
-        
-    }
-
-    .barra-busqueda input {
-        outline: none;
-        text-decoration: none;
-        border-radius: 7px;
-        border: none;
-        padding: 8px;
-        width: 30%;
-        box-shadow: 0px 0px 4px;
-    }
-
-    .actions button {
-        outline: none;
-        text-decoration: none;
-        border-radius: 7px;
-        border: none;
-        padding: 8px;
-        position: relative;
-        right: 40px;
-    }
-
 }
 
 .navbar-brand{

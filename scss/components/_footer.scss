@@ -1,0 +1,52 @@
+footer{
+    background: linear-gradient(rgb(255, 255, 
+    255), 85%, grey);
+
+    .contenedor-footer{
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: 'Open Sans', sans-serif;
+        h3{
+            font-weight:600;
+            font-size: 25px;
+            margin-left: 30px;            
+        }
+
+        p{
+            width: 100%;
+            max-width: 600px;
+        }
+
+        ul{
+            list-style: none;
+            li{
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .redes-sociales{
+        h3{
+            color: aliceblue;
+        }
+    }
+
+}
+
+@media screen and (max-width:729px){
+    section{
+        .nosotros-container{
+            .nosotros-info{
+                img{
+                    width: 100%;
+                    border-radius: 9px;
+                }
+            }
+        }
+    }
+}

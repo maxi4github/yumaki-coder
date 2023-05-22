@@ -1,0 +1,290 @@
+main{
+    background-color: rgb(186, 238, 247);
+    font-family: 'Ubuntu', sans-serif;
+    .barra{
+        background-color: rgb(186, 238, 247);
+        position: sticky;
+        top: 0px;
+        ul{
+            margin-right: 2rem;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            li{
+                margin: 30px;
+                text-decoration: none;
+                transition: 1s;
+                padding: 4px;
+                &:hover{
+                    border-left: 1px solid rgb(8, 130, 151);
+                    border-right: 1px solid rgb(8, 130, 151);
+                    padding: 3px;
+                }
+                a{
+                    text-decoration: none;
+                    color: rgb(65, 61, 61);
+                    font-size: large;
+                    font-weight: 500px;
+                    font-weight: 600;
+                    &:hover{
+                        color: rgb(8, 130, 151);
+                    }
+
+                }
+            }
+        }
+    }
+    section{
+        .galeria{
+            .imagenes-galeria{
+                gap: 20px;
+                display: grid;
+                grid-template-columns: 33.3% 29% 35.2%;
+                grid-template-rows: 450px 450px 450px;
+                padding: 100px;
+                flex-wrap: wrap;
+                .grid-item{
+                    .grid-img{
+                        flex-wrap: wrap;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .grid-item:nth-child(2){
+                        grid-column-start: span 2;
+                    }
+
+                    .grid-item:nth-child(7){
+                        grid-column-start: span 3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    .contactanos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 100px 140px;
+        .contenedor-contacto{
+            width: 85%;
+            max-width: 500px;
+            background-color: aliceblue;
+            padding: 30px 40px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px #000000b3;
+            h1{
+                margin-top: 0;
+                font-weight: 200;
+            }
+            .texto{
+                border: 1px solid gray;
+                margin: 8px 0;
+                padding: 12px 18px;
+                border-radius: 8px;
+                label{
+                    display: block;
+                    text-align: left;
+                    color: #333;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                }
+                input{
+                    width: 100%;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    font-size: 18px;
+                    margin-top: 6px;
+                }
+                textarea{
+                    width: 100%;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    font-size: 18px;
+                    margin-top: 6px;
+                }
+            }
+
+            .boton{
+                width: 100%;
+                padding: 5px;
+                border: none;
+                background-color: rgb(112, 149, 180, 0.466);
+                border-radius: 6px;
+                transition: 0.4s;
+                &:hover{
+                    background-color: rgba(112, 149, 180, 0.822);
+                }
+            }
+        }
+    }
+}
+
+main{
+    section{
+        .login-contenedor{
+            padding-top: 100px;
+            padding-bottom: 11rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+            width: 100%;
+            .info-contenedor{
+                width: 30%;
+                padding: 30px;
+                border-radius: 5px;
+                background-color: aliceblue;   
+
+
+                .formas{
+                    display:flex ;
+                    justify-content: space-evenly;
+                    .elemento-log{
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        padding-top: 8px;
+                        padding-bottom:8px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        a{
+                            text-decoration: none;
+                            color: black;
+                            font-weight: 700;
+                            img{
+                                padding-right: 7px;
+                                text-align: center;
+
+                            }
+                        }
+                    }
+                .inputs-contenedor{
+                    .inputs-login{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 50px;
+                        margin-bottom: 30px;
+                        width: 100%;
+                        gap: 20px;
+                        input{
+                            width: 100%;
+                            border: none;
+                            padding: 7px;
+                            border-radius: 8px;
+                            outline: none;
+                        }
+                    }
+
+                    p{
+                        a{text-decoration: none;}
+                    }                   
+
+                    button{
+                        width: 90%;
+                        border: none;
+                        padding: 5px;
+                        border-radius: 4px;
+                        background-color: rgba(112, 149, 180, 0.466);
+                        transition: 0.1s;
+                        &:hover{
+                            background-color: rgba(112, 149, 180, 0.822);
+                        }
+                    }
+                }  
+            .img-footer{
+                height: 437px;
+                border-radius: 6px;
+                width: 640px;
+            }
+                }
+            }
+        }
+    }
+}
+
+section{
+    .contenedor-deportes{
+        .futbol-info{
+            h2{
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+            .contenedor-general{
+                display: flex;
+                justify-content: center;
+                margin-left: 100px;
+                margin-right: 100px;
+                gap: 50px;
+                .texto{
+                    h3{
+                        text-align: center;
+                    }                 
+                }
+        }        
+            }
+        .contenedor{
+            display: flex;
+            justify-content: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            gap: 50px;
+            padding-bottom: 100px;
+            .texto{
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+section{
+    .nosotros-principal{
+        background-image: url("../img/matheus-ferrero-TkrRvwxjb_8-unsplash\ \(1\).jpg");
+        height: 350px;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: aliceblue;
+            text-align: center;
+            display: flex;
+            padding: 10px;
+            font-family: 'DynaPuff', cursive;
+            border: 2px solid white;
+            border-radius: 7px;
+            margin-bottom: 80px;
+        }
+    }
+
+    .nosotros-container{
+        .nosotros.info{
+            margin-right: 100px;
+            display: flex;
+            justify-content: center;
+            margin-left: 100px;
+            padding-top: 70px;
+            padding-bottom: 120px;
+            gap: 60px;
+            .texto-mision{
+                h2{
+                    padding-top: 50px;
+                }
+            }
+            img{
+                width: 600px;
+                border-radius: 9px;
+            }
+        }
+    }
+}

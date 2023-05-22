@@ -1,0 +1,100 @@
+.header-index{
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/CENTRODEPORTIVO-SONORANORTE.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    .titulo-principal{
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        color: aliceblue;
+        position: sticky;
+        top: 0;
+        .titulo{
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 40px;
+            padding: 10px;
+            font-family: "DynaPuff", cursive;
+            transition: 0.1s;
+            &:hover{
+                transform: scale(1.1);
+            }
+            img{
+                width: 40px;
+            }
+        }
+
+        .ingresar{
+            margin: 20px;
+            text-decoration: none;
+            background-color: aliceblue;
+            color: black;
+            padding: 9px;
+            font-size: large;
+            border-radius: 9px;
+            transition: 0.1s;
+            &:hover{
+                color: black;
+                transform: scale(1.1);
+            }
+        }       
+    }
+
+    .hero{
+        color: aliceblue;
+        margin-top: 4rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        h2{
+            font-size: 60px;
+            font-family: "DynaPuff", cursive;
+        }
+
+        }
+
+        p{
+            font-size: 20px;
+            font-family: "DynaPuff", cursive;
+        }
+}
+
+header{
+    .navbar{
+        nav{
+            .container-fluid{
+                display: flex;
+                justify-content: space-between;
+                .navbar-brand{
+                    color: aliceblue;
+                    text-decoration: none;
+                    font-size: 40px;
+                    padding: 10px;
+                    font-family: "DynaPuff", cursive;
+                    transition: 0.1s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                    img{
+                        width: 40px;
+                    }
+                    
+                    .navbar-text{
+                        &:hover{
+                            color: black;
+                            transform: scale(1.1);
+                        }                        
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
