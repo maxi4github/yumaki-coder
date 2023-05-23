@@ -1,0 +1,17 @@
+$color-principal:rgb(186, 238, 247);
+$color-secundario: rgba(112, 149, 180, 0.466);
+$color-tercero: rgb(8, 130, 151);
+
+$widht-principal: 100%;
+
+%flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex ($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}

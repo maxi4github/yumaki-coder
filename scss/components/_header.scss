@@ -1,17 +1,15 @@
 .header-index{
     font-family: "Open Sans", sans-serif;
-    width: 100%;
+    width: $widht-principal;
     height: 800px;
     background-image: url("../img/CENTRODEPORTIVO-SONORANORTE.jpg");
     background-position: center;
     background-attachment: fixed;
     .titulo-principal{
-        display: flex;
-        text-align: center;
-        justify-content: space-between;
-        color: aliceblue;
+        @include flex (flex, space-between, center);
         position: sticky;
         top: 0;
+        color: aliceblue;
         .titulo{
             color: aliceblue;
             text-decoration: none;
@@ -46,11 +44,9 @@
     .hero{
         color: aliceblue;
         margin-top: 4rem;
-        display: flex;
-        text-align: center;
-        justify-content: center;
+        @extend %flex;
         flex-direction: column;
-        width: 100%;
+        width: $widht-principal;
         h2{
             font-size: 60px;
             font-family: "DynaPuff", cursive;
@@ -68,8 +64,7 @@ header{
     .navbar{
         nav{
             .container-fluid{
-                display: flex;
-                justify-content: space-between;
+                @include flex (flex, space-between);
                 .navbar-brand{
                     color: aliceblue;
                     text-decoration: none;

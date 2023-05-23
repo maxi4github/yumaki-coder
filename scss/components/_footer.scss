@@ -4,9 +4,8 @@ footer{
 
     .contenedor-footer{
         margin-top: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+        width: $widht-principal;
+        @include flex (flex, space-evenly);
         font-family: 'Open Sans', sans-serif;
         h3{
             font-weight:600;
@@ -15,7 +14,7 @@ footer{
         }
 
         p{
-            width: 100%;
+            width: $widht-principal;
             max-width: 600px;
         }
 
@@ -36,17 +35,4 @@ footer{
         }
     }
 
-}
-
-@media screen and (max-width:729px){
-    section{
-        .nosotros-container{
-            .nosotros-info{
-                img{
-                    width: 100%;
-                    border-radius: 9px;
-                }
-            }
-        }
-    }
 }

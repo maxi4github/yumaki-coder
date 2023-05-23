@@ -1,15 +1,14 @@
 main{
-    background-color: rgb(186, 238, 247);
+    background-color: $color-principal;
     font-family: 'Ubuntu', sans-serif;
     .barra{
-        background-color: rgb(186, 238, 247);
+        background-color: $color-principal;
         position: sticky;
         top: 0px;
         ul{
             margin-right: 2rem;
             text-decoration: none;
-            display: flex;
-            justify-content: center;
+            @include flex (flex, center);
             list-style: none;
             li{
                 margin: 30px;
@@ -17,8 +16,8 @@ main{
                 transition: 1s;
                 padding: 4px;
                 &:hover{
-                    border-left: 1px solid rgb(8, 130, 151);
-                    border-right: 1px solid rgb(8, 130, 151);
+                    border-left: 1px solid $color-tercero;
+                    border-right: 1px solid $color-tercero;
                     padding: 3px;
                 }
                 a{
@@ -28,7 +27,7 @@ main{
                     font-weight: 500px;
                     font-weight: 600;
                     &:hover{
-                        color: rgb(8, 130, 151);
+                        color: $color-tercero;
                     }
 
                 }
@@ -47,7 +46,7 @@ main{
                 .grid-item{
                     .grid-img{
                         flex-wrap: wrap;
-                        width: 100%;
+                        width: $widht-principal;
                         height: 100%;
                         object-fit: cover;
                     }
@@ -66,9 +65,7 @@ main{
 
 main{
     .contactanos{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex;
         padding: 50px 100px 140px;
         .contenedor-contacto{
             width: 85%;
@@ -95,7 +92,7 @@ main{
                     font-size: 14px;
                 }
                 input{
-                    width: 100%;
+                    width: $widht-principal;
                     border: none;
                     background: none;
                     outline: none;
@@ -103,7 +100,7 @@ main{
                     margin-top: 6px;
                 }
                 textarea{
-                    width: 100%;
+                    width: $widht-principal;
                     border: none;
                     background: none;
                     outline: none;
@@ -113,10 +110,10 @@ main{
             }
 
             .boton{
-                width: 100%;
+                width: $widht-principal;
                 padding: 5px;
                 border: none;
-                background-color: rgb(112, 149, 180, 0.466);
+                background-color: $color-secundario;
                 border-radius: 6px;
                 transition: 0.4s;
                 &:hover{
@@ -125,19 +122,18 @@ main{
             }
         }
     }
-}
+}    
+
 
 main{
     section{
         .login-contenedor{
             padding-top: 100px;
             padding-bottom: 11rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex;
             gap: 30px;
             text-align: center;
-            width: 100%;
+            width: $widht-principal;
             .info-contenedor{
                 width: 30%;
                 padding: 30px;
@@ -146,8 +142,7 @@ main{
 
 
                 .formas{
-                    display:flex ;
-                    justify-content: space-evenly;
+                    @include flex (flex, space-evenly);
                     .elemento-log{
                         border: 1px solid black;
                         border-radius: 5px;
@@ -172,10 +167,10 @@ main{
                         flex-direction: column;
                         margin-top: 50px;
                         margin-bottom: 30px;
-                        width: 100%;
+                        width: $widht-principal;
                         gap: 20px;
                         input{
-                            width: 100%;
+                            width: $widht-principal;
                             border: none;
                             padding: 7px;
                             border-radius: 8px;
@@ -192,7 +187,7 @@ main{
                         border: none;
                         padding: 5px;
                         border-radius: 4px;
-                        background-color: rgba(112, 149, 180, 0.466);
+                        background-color: $color-secundario;
                         transition: 0.1s;
                         &:hover{
                             background-color: rgba(112, 149, 180, 0.822);
@@ -219,8 +214,7 @@ section{
                 padding-bottom: 10px;
             }
             .contenedor-general{
-                display: flex;
-                justify-content: center;
+                @include flex (flex, center);
                 margin-left: 100px;
                 margin-right: 100px;
                 gap: 50px;
@@ -232,8 +226,7 @@ section{
         }        
             }
         .contenedor{
-            display: flex;
-            justify-content: center;
+            @include flex (flex, center);
             margin-left: 100px;
             margin-right: 100px;
             gap: 50px;
@@ -252,9 +245,7 @@ section{
         background-image: url("../img/matheus-ferrero-TkrRvwxjb_8-unsplash\ \(1\).jpg");
         height: 350px;
         background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex;
         h1{
             color: aliceblue;
             text-align: center;
@@ -270,8 +261,7 @@ section{
     .nosotros-container{
         .nosotros.info{
             margin-right: 100px;
-            display: flex;
-            justify-content: center;
+            @include flex (flex, center);
             margin-left: 100px;
             padding-top: 70px;
             padding-bottom: 120px;

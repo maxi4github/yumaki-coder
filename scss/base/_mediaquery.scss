@@ -11,7 +11,7 @@
             .grid-item{
                 .grid-img {
                     flex-wrap: wrap;
-                    width: 100%;
+                    width: $widht-principal;
                     height: 100%;
                     object-fit: cover;
                 }
@@ -40,7 +40,7 @@
         .grid-item{
             .grid-img {
                 flex-wrap: wrap;
-                width: 100%;
+                width: $widht-principal;
                 height: 100%;
                 object-fit: cover;
             }
@@ -62,7 +62,7 @@
         .grid-item{
             .grid-img {
                 flex-wrap: wrap;
-                width: 100%;
+                width: $widht-principal;
                 height: 100%;
                 object-fit: cover;
             }
@@ -71,7 +71,7 @@
 
     .grid-img {
         flex-wrap: wrap;
-        width: 100%;
+        width: $widht-principal;
         height: 100%;
         object-fit: cover;
     }
@@ -109,9 +109,7 @@
 
     main{
         .contactanos{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex;
             padding: 50px;
             .contenedor-contacto{
                 width: 100%;
@@ -131,9 +129,7 @@
         .login-contenedor{
             padding-top: 100px;
             padding-bottom: 11rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex;
             gap: 30px;
             text-align: center;
             width: 100%;
@@ -160,8 +156,7 @@
         .contendor-deportes{
             .futbol-info{
                 .contenedor-general{
-                    display: flex;
-                    justify-content: center;
+                    @include flex (flex, center);
                     margin-left: 100px;
                     margin-right: 100px;
                     gap: 50px;
@@ -169,8 +164,7 @@
                 }
             }
             .contenedor{
-                display: flex;
-                justify-content: center;
+                @include flex (flex, center);
                 margin-left: 100px;
                 margin-right: 100px;
                 gap: 50px;
@@ -188,8 +182,7 @@
         .nosotros-container{
             .nosotros-info{
                 margin-right: 100px;
-                display: flex;
-                justify-content: center;
+                @include flex (flex, center);
                 margin-left: 100px;
                 padding-top: 70px;
                 padding-bottom: 120px;
@@ -206,8 +199,22 @@
         .nosotros-container{
             .nosotros-info{
                 img{
-                    width: 100%;
+                    width: $widht-principal;
                     border-radius: 9px;                   
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:729px){
+    section{
+        .nosotros-container{
+            .nosotros-info{
+                img{
+                    width: $widht-principal;
+                    border-radius: 9px;
                 }
             }
         }

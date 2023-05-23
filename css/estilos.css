@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box; }
 
+.header-index .hero, main .contactanos, section .nosotros-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .header-index {
   font-family: "Open Sans", sans-serif;
   width: 100%;
@@ -14,9 +19,8 @@
   background-attachment: fixed; }
   .header-index .titulo-principal {
     display: flex;
-    text-align: center;
     justify-content: space-between;
-    color: aliceblue;
+    align-items: center;
     position: sticky;
     top: 0; }
     .header-index .titulo-principal .titulo {
@@ -45,9 +49,6 @@
   .header-index .hero {
     color: aliceblue;
     margin-top: 4rem;
-    display: flex;
-    text-align: center;
-    justify-content: center;
     flex-direction: column;
     width: 100%; }
     .header-index .hero h2 {
@@ -57,22 +58,398 @@
     font-size: 20px;
     font-family: "DynaPuff", cursive; }
 
-header .navbar nav .container-fluid {
+header .navbar nav .container-fluid .navbar-brand {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 40px;
+  padding: 10px;
+  font-family: "DynaPuff", cursive;
+  transition: 0.1s; }
+  header .navbar nav .container-fluid .navbar-brand:hover {
+    transform: scale(1.1); }
+  header .navbar nav .container-fluid .navbar-brand img {
+    width: 40px; }
+  header .navbar nav .container-fluid .navbar-brand .navbar-text:hover {
+    color: black;
+    transform: scale(1.1); }
+  header .navbar nav .container-fluid .navbar-brand .navbar-text a {
+    text-decoration: none; }
+
+main {
+  background-color: #baeef7;
+  font-family: 'Ubuntu', sans-serif; }
+  main .barra {
+    background-color: #baeef7;
+    position: sticky;
+    top: 0px; }
+    main .barra ul {
+      margin-right: 2rem;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      list-style: none; }
+      main .barra ul li {
+        margin: 30px;
+        text-decoration: none;
+        transition: 1s;
+        padding: 4px; }
+        main .barra ul li:hover {
+          border-left: 1px solid #088297;
+          border-right: 1px solid #088297;
+          padding: 3px; }
+        main .barra ul li a {
+          text-decoration: none;
+          color: #413d3d;
+          font-size: large;
+          font-weight: 500px;
+          font-weight: 600; }
+          main .barra ul li a:hover {
+            color: #088297; }
+  main section .galeria .imagenes-galeria {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 33.3% 29% 35.2%;
+    grid-template-rows: 450px 450px 450px;
+    padding: 100px;
+    flex-wrap: wrap; }
+    main section .galeria .imagenes-galeria .grid-item .grid-img {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    main section .galeria .imagenes-galeria .grid-item .grid-item:nth-child(2) {
+      grid-column-start: span 2; }
+    main section .galeria .imagenes-galeria .grid-item .grid-item:nth-child(7) {
+      grid-column-start: span 3; }
+
+main .contactanos {
+  padding: 50px 100px 140px; }
+  main .contactanos .contenedor-contacto {
+    width: 85%;
+    max-width: 500px;
+    background-color: aliceblue;
+    padding: 30px 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px #000000b3; }
+    main .contactanos .contenedor-contacto h1 {
+      margin-top: 0;
+      font-weight: 200; }
+    main .contactanos .contenedor-contacto .texto {
+      border: 1px solid gray;
+      margin: 8px 0;
+      padding: 12px 18px;
+      border-radius: 8px; }
+      main .contactanos .contenedor-contacto .texto label {
+        display: block;
+        text-align: left;
+        color: #333;
+        text-transform: uppercase;
+        font-size: 14px; }
+      main .contactanos .contenedor-contacto .texto input {
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 18px;
+        margin-top: 6px; }
+      main .contactanos .contenedor-contacto .texto textarea {
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 18px;
+        margin-top: 6px; }
+    main .contactanos .contenedor-contacto .boton {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      background-color: rgba(112, 149, 180, 0.466);
+      border-radius: 6px;
+      transition: 0.4s; }
+      main .contactanos .contenedor-contacto .boton:hover {
+        background-color: rgba(112, 149, 180, 0.822); }
+
+main section .login-contenedor {
+  padding-top: 100px;
+  padding-bottom: 11rem;
   display: flex;
-  justify-content: space-between; }
-  header .navbar nav .container-fluid .navbar-brand {
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  width: 100%; }
+  main section .login-contenedor .info-contenedor {
+    width: 30%;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: aliceblue; }
+    main section .login-contenedor .info-contenedor .formas {
+      display: flex;
+      justify-content: space-evenly; }
+      main section .login-contenedor .info-contenedor .formas .elemento-log {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 20px;
+        padding-right: 20px; }
+        main section .login-contenedor .info-contenedor .formas .elemento-log a {
+          text-decoration: none;
+          color: black;
+          font-weight: 700; }
+          main section .login-contenedor .info-contenedor .formas .elemento-log a img {
+            padding-right: 7px;
+            text-align: center; }
+      main section .login-contenedor .info-contenedor .formas .inputs-contenedor .inputs-login {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 100%;
+        gap: 20px; }
+        main section .login-contenedor .info-contenedor .formas .inputs-contenedor .inputs-login input {
+          width: 100%;
+          border: none;
+          padding: 7px;
+          border-radius: 8px;
+          outline: none; }
+      main section .login-contenedor .info-contenedor .formas .inputs-contenedor p a {
+        text-decoration: none; }
+      main section .login-contenedor .info-contenedor .formas .inputs-contenedor button {
+        width: 90%;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        background-color: rgba(112, 149, 180, 0.466);
+        transition: 0.1s; }
+        main section .login-contenedor .info-contenedor .formas .inputs-contenedor button:hover {
+          background-color: rgba(112, 149, 180, 0.822); }
+      main section .login-contenedor .info-contenedor .formas .img-footer {
+        height: 437px;
+        border-radius: 6px;
+        width: 640px; }
+
+section .contenedor-deportes .futbol-info h2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px; }
+
+section .contenedor-deportes .futbol-info .contenedor-general {
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 50px; }
+  section .contenedor-deportes .futbol-info .contenedor-general .texto h3 {
+    text-align: center; }
+
+section .contenedor-deportes .contenedor {
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 50px;
+  padding-bottom: 100px; }
+  section .contenedor-deportes .contenedor .texto h3 {
+    text-align: center; }
+
+section .nosotros-principal {
+  background-image: url("../img/matheus-ferrero-TkrRvwxjb_8-unsplash (1).jpg");
+  height: 350px;
+  background-position: center; }
+  section .nosotros-principal h1 {
     color: aliceblue;
-    text-decoration: none;
-    font-size: 40px;
+    text-align: center;
+    display: flex;
     padding: 10px;
-    font-family: "DynaPuff", cursive;
-    transition: 0.1s; }
-    header .navbar nav .container-fluid .navbar-brand:hover {
-      transform: scale(1.1); }
-    header .navbar nav .container-fluid .navbar-brand img {
-      width: 40px; }
-    header .navbar nav .container-fluid .navbar-brand .navbar-text:hover {
-      color: black;
-      transform: scale(1.1); }
-    header .navbar nav .container-fluid .navbar-brand .navbar-text a {
-      text-decoration: none; }
+    font-family: 'DynaPuff', cursive;
+    border: 2px solid white;
+    border-radius: 7px;
+    margin-bottom: 80px; }
+
+section .nosotros-container .nosotros.info {
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  padding-top: 70px;
+  padding-bottom: 120px;
+  gap: 60px; }
+  section .nosotros-container .nosotros.info .texto-mision h2 {
+    padding-top: 50px; }
+  section .nosotros-container .nosotros.info img {
+    width: 600px;
+    border-radius: 9px; }
+
+footer {
+  background: linear-gradient(white, 85%, grey); }
+  footer .contenedor-footer {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Open Sans', sans-serif; }
+    footer .contenedor-footer h3 {
+      font-weight: 600;
+      font-size: 25px;
+      margin-left: 30px; }
+    footer .contenedor-footer p {
+      width: 100%;
+      max-width: 600px; }
+    footer .contenedor-footer ul {
+      list-style: none; }
+      footer .contenedor-footer ul li a {
+        text-decoration: none;
+        color: black; }
+  footer .redes-sociales h3 {
+    color: aliceblue; }
+
+@media screen and (max-width: 1270px) {
+  .galeria .imagenes-galeria {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 33.3% 29% 35.2%;
+    grid-template-rows: 450px 450px 450px;
+    padding: 60px;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .galeria .imagenes-galeria .grid-item .grid-img {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .galeria .imagenes-galeria .grid-item .grid-item:nth-child(2) {
+      grid-column-start: span 2; }
+    .galeria .imagenes-galeria .grid-item .grid-item:nth-child(7) {
+      grid-column-start: span 3; } }
+
+@media screen and (max-width: 857px) {
+  .imagenes-galeria {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .imagenes-galeria .grid-item .grid-img {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; } }
+
+@media screen and (max-width: 391px) {
+  .imagenes-galeria {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .imagenes-galeria .grid-item .grid-img {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .grid-img {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  main .barra {
+    background-color: #baeef7;
+    position: static; }
+    main .barra ul {
+      margin-right: 2rem;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-direction: column;
+      text-align: center; }
+      main .barra ul li {
+        margin: 10px;
+        text-decoration: none;
+        transition: 1s; }
+        main .barra ul li a {
+          text-decoration: none;
+          color: #413d3d;
+          font-size: large;
+          font-weight: 500px;
+          font-weight: 600; } }
+
+@media screen and (max-width: 445px) {
+  main .contactanos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; }
+    main .contactanos .contenedor-contacto {
+      width: 100%;
+      background: #f1f1f1;
+      padding: 30px 40px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 20px #000000b3; } }
+
+@media screen and (max-width: 1350px) {
+  section .login-contenedor {
+    padding-top: 100px;
+    padding-bottom: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    width: 100%;
+    flex-direction: column; }
+    section .login-contenedor .info-contenedor {
+      width: 40%;
+      padding: 30px;
+      border-radius: 5px;
+      background-color: aliceblue; }
+      section .login-contenedor .info-contenedor .img-footer {
+        height: 437px;
+        border-radius: 6px;
+        width: 640px;
+        display: none; } }
+
+@media screen and (max-width: 1230px) {
+  section .contendor-deportes .futbol-info .contenedor-general {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 50px;
+    flex-direction: column-reverse; }
+  section .contendor-deportes .contenedor {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 50px;
+    padding-bottom: 100px;
+    flex-direction: column; } }
+
+@media screen and (max-width: 1339px) {
+  section .nosotros-container .nosotros-info {
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    gap: 60px;
+    flex-direction: column; } }
+
+@media screen and (max-width: 729px) {
+  section .nosotros-container .nosotros-info img {
+    width: 100%;
+    border-radius: 9px; } }
+
+@media screen and (max-width: 729px) {
+  section .nosotros-container .nosotros-info img {
+    width: 100%;
+    border-radius: 9px; } }
