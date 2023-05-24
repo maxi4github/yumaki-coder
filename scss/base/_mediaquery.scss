@@ -1,222 +1,51 @@
-@media screen and (max-width: 1270px) {
-    .galeria
-        .imagenes-galeria {
-            gap: 20px;
-            display: grid;
-            grid-template-columns: 33.3% 29% 35.2%;
-            grid-template-rows: 450px 450px 450px;
-            padding: 60px;
-            flex-wrap: wrap;
-            flex-direction: column;
-            .grid-item{
-                .grid-img {
-                    flex-wrap: wrap;
-                    width: $widht-principal;
-                    height: 100%;
-                    object-fit: cover;
-                }
 
-                .grid-item:nth-child(2) {
-                    grid-column-start: span 2;
-                }
-
-                .grid-item:nth-child(7) {
-                    grid-column-start: span 3;
-                }
-            }
-        
+@mixin res1 {
+    @media screen and (max-width: 1270px){
+        @content;
     }
 }
 
-@media screen and (max-width: 857px) {
-    .imagenes-galeria {
-        gap: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px 300px 300px;
-        padding: 20px;
-        flex-wrap: wrap;
-        flex-direction: column;
-        .grid-item{
-            .grid-img {
-                flex-wrap: wrap;
-                width: $widht-principal;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+@mixin res2 {
+    @media screen and (max-width: 880px){
+        @content;
+    }
+}
+
+@mixin res3 {
+    @media screen and (max-width: 391px){
+        @content;
+    }
+}
+
+@mixin res4 {
+    @media screen and (max-width: 445px){
+        @content;
     }
 }
 
 
-
-@media screen and (max-width: 391px) {
-    .imagenes-galeria {
-        gap: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px 300px 300px;
-        padding: 20px;
-        flex-wrap: wrap;
-        flex-direction: column;
-        .grid-item{
-            .grid-img {
-                flex-wrap: wrap;
-                width: $widht-principal;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
-    .grid-img {
-        flex-wrap: wrap;
-        width: $widht-principal;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    main{
-        .barra {
-            background-color: rgb(186, 238, 247);
-            position: static;
-            ul{
-                margin-right: 2rem;
-                text-decoration: none;
-                display: flex;
-                justify-content: center;
-                list-style: none;
-                flex-direction: column;
-                text-align: center;
-                li{
-                    margin: 10px;
-                    text-decoration: none;
-                    transition: 1s;
-                    a{
-                        text-decoration: none;
-                        color: rgb(65, 61, 61);
-                        font-size: large;
-                        font-weight: 500px;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-    }
-} 
-
-@media screen and (max-width: 445px){
-
-    main{
-        .contactanos{
-            @extend %flex;
-            padding: 50px;
-            .contenedor-contacto{
-                width: 100%;
-                background: #f1f1f1;
-                padding: 30px 40px;
-                border-radius: 8px;
-                text-align: center;
-                box-shadow: 0 0 20px #000000b3;
-            }
-        }
+@mixin res5 {
+    @media screen and (max-width: 1143px){
+        @content;
     }
 }
 
-@media screen and (max-width:1350px){
+@mixin res6 {
+    @media screen and (max-width: 1350px){
+        @content;
+    }
+}
 
-    section{
-        .login-contenedor{
-            padding-top: 100px;
-            padding-bottom: 11rem;
-            @extend %flex;
-            gap: 30px;
-            text-align: center;
-            width: 100%;
-            flex-direction: column;
-            .info-contenedor{
-                width: 40%;
-                padding: 30px;
-                border-radius: 5px;
-                background-color: aliceblue;   
-                .img-footer {
-                    height: 437px;
-                    border-radius: 6px;
-                    width: 640px;
-                    display: none;                    
-                }
-            }
-        }    
+@mixin res7 {
+    @media screen and (max-width: 729px){
+        @content;
+    }
+}
+
+@mixin res8 {
+    @media screen and (max-width: 634px){
+        @content;
     }
 }
 
 
-@media screen and (max-width:1230px){
-    section{
-        .contendor-deportes{
-            .futbol-info{
-                .contenedor-general{
-                    @include flex (flex, center);
-                    margin-left: 100px;
-                    margin-right: 100px;
-                    gap: 50px;
-                    flex-direction: column-reverse;
-                }
-            }
-            .contenedor{
-                @include flex (flex, center);
-                margin-left: 100px;
-                margin-right: 100px;
-                gap: 50px;
-                padding-bottom: 100px;
-                flex-direction: column;
-                
-            }
-        }
-    }
-}
-
-@media screen and (max-width:1339px){
-
-    section{
-        .nosotros-container{
-            .nosotros-info{
-                margin-right: 100px;
-                @include flex (flex, center);
-                margin-left: 100px;
-                padding-top: 70px;
-                padding-bottom: 120px;
-                gap: 60px;
-                flex-direction: column;
-            }
-            
-        }
-    }    
-}
-
-@media screen and (max-width:729px){
-    section{
-        .nosotros-container{
-            .nosotros-info{
-                img{
-                    width: $widht-principal;
-                    border-radius: 9px;                   
-                }
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width:729px){
-    section{
-        .nosotros-container{
-            .nosotros-info{
-                img{
-                    width: $widht-principal;
-                    border-radius: 9px;
-                }
-            }
-        }
-    }
-}

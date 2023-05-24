@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box; }
 
-.header-index .hero, main .contactanos, section .nosotros-principal {
+.header-index .hero, main .contactanos {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -22,7 +22,8 @@
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0; }
+    top: 0;
+    color: aliceblue; }
     .header-index .titulo-principal .titulo {
       color: aliceblue;
       text-decoration: none;
@@ -51,28 +52,40 @@
     margin-top: 4rem;
     flex-direction: column;
     width: 100%; }
-    .header-index .hero h2 {
-      font-size: 60px;
-      font-family: "DynaPuff", cursive; }
+    .header-index .hero h1 {
+      font-size: 50px;
+      font-family: "DynaPuff", cursive;
+      text-align: center; }
   .header-index p {
     font-size: 20px;
     font-family: "DynaPuff", cursive; }
 
-header .navbar nav .container-fluid .navbar-brand {
-  color: aliceblue;
-  text-decoration: none;
-  font-size: 40px;
-  padding: 10px;
-  font-family: "DynaPuff", cursive;
-  transition: 0.1s; }
-  header .navbar nav .container-fluid .navbar-brand:hover {
-    transform: scale(1.1); }
-  header .navbar nav .container-fluid .navbar-brand img {
-    width: 40px; }
-  header .navbar nav .container-fluid .navbar-brand .navbar-text:hover {
+header .container-fluid {
+  display: flex;
+  justify-content: space-between; }
+  header .container-fluid .navbar-brand {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    font-family: "DynaPuff", cursive;
+    transition: 0.1s; }
+    header .container-fluid .navbar-brand:hover {
+      transform: scale(1.1); }
+    header .container-fluid .navbar-brand img {
+      width: 40px; }
+  header .container-fluid .navbar-collapse .navbar-text {
+    margin: 10px;
+    text-decoration: none;
+    background-color: #adbfcf;
     color: black;
-    transform: scale(1.1); }
-  header .navbar nav .container-fluid .navbar-brand .navbar-text a {
+    padding: 9px;
+    font-size: large;
+    border-radius: 9px;
+    transition: 0.1s; }
+    header .container-fluid .navbar-collapse .navbar-text:hover {
+      color: black;
+      transform: scale(1.1); }
+  header .container-fluid .navbar-collapse a {
     text-decoration: none; }
 
 main {
@@ -82,12 +95,25 @@ main {
     background-color: #baeef7;
     position: sticky;
     top: 0px; }
+    @media screen and (max-width: 391px) {
+      main .barra {
+        background-color: #baeef7;
+        position: static; } }
     main .barra ul {
       margin-right: 2rem;
       text-decoration: none;
       display: flex;
       justify-content: center;
       list-style: none; }
+      @media screen and (max-width: 391px) {
+        main .barra ul {
+          margin-right: 2rem;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          flex-direction: column;
+          text-align: center; } }
       main .barra ul li {
         margin: 30px;
         text-decoration: none;
@@ -97,6 +123,11 @@ main {
           border-left: 1px solid #088297;
           border-right: 1px solid #088297;
           padding: 3px; }
+        @media screen and (max-width: 391px) {
+          main .barra ul li {
+            margin: 10px;
+            text-decoration: none;
+            transition: 1s; } }
         main .barra ul li a {
           text-decoration: none;
           color: #413d3d;
@@ -105,6 +136,13 @@ main {
           font-weight: 600; }
           main .barra ul li a:hover {
             color: #088297; }
+          @media screen and (max-width: 391px) {
+            main .barra ul li a {
+              text-decoration: none;
+              color: #413d3d;
+              font-size: large;
+              font-weight: 500px;
+              font-weight: 600; } }
   main section .galeria .imagenes-galeria {
     gap: 20px;
     display: grid;
@@ -112,18 +150,53 @@ main {
     grid-template-rows: 450px 450px 450px;
     padding: 100px;
     flex-wrap: wrap; }
-    main section .galeria .imagenes-galeria .grid-item .grid-img {
-      flex-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-    main section .galeria .imagenes-galeria .grid-item .grid-item:nth-child(2) {
+    @media screen and (max-width: 1270px) {
+      main section .galeria .imagenes-galeria {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 33.3% 29% 35.2%;
+        grid-template-rows: 450px 450px 450px;
+        padding: 60px;
+        flex-wrap: wrap;
+        flex-direction: column; } }
+    @media screen and (max-width: 880px) {
+      main section .galeria .imagenes-galeria {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px 300px;
+        padding: 20px;
+        flex-wrap: wrap;
+        flex-direction: column; } }
+  main section .galeria .grid-item:nth-child(3) {
+    grid-row-start: span 2; }
+  main section .galeria .grid-item:nth-child(4) {
+    grid-row-start: span 2; }
+  @media screen and (max-width: 1270px) {
+    main section .galeria .grid-item:nth-child(2) {
       grid-column-start: span 2; }
-    main section .galeria .imagenes-galeria .grid-item .grid-item:nth-child(7) {
-      grid-column-start: span 3; }
+    main section .galeria .grid-item:nth-child(7) {
+      grid-column-start: span 3; } }
+  main section .galeria .grid-item .grid-img {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+    @media screen and (max-width: 1270px) {
+      main section .galeria .grid-item .grid-img {
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; } }
 
 main .contactanos {
   padding: 50px 100px 140px; }
+  @media screen and (max-width: 634px) {
+    main .contactanos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; } }
   main .contactanos .contenedor-contacto {
     width: 85%;
     max-width: 500px;
@@ -132,6 +205,14 @@ main .contactanos {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 0 10px #000000b3; }
+    @media screen and (max-width: 634px) {
+      main .contactanos .contenedor-contacto {
+        width: 100%;
+        background: #f1f1f1;
+        padding: 30px 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 0 20px #000000b3; } }
     main .contactanos .contenedor-contacto h1 {
       margin-top: 0;
       font-weight: 200; }
@@ -179,11 +260,44 @@ main section .login-contenedor {
   gap: 30px;
   text-align: center;
   width: 100%; }
+  @media screen and (max-width: 1350px) {
+    main section .login-contenedor {
+      padding-top: 100px;
+      padding-bottom: 11rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+      width: 100%;
+      flex-direction: column; } }
+  main section .login-contenedor .img-footer {
+    height: 437px;
+    border-radius: 6px;
+    width: 640px; }
+    @media screen and (max-width: 1350px) {
+      main section .login-contenedor .img-footer {
+        height: 437px;
+        border-radius: 6px;
+        width: 640px;
+        display: none; } }
   main section .login-contenedor .info-contenedor {
     width: 30%;
     padding: 30px;
     border-radius: 5px;
     background-color: aliceblue; }
+    @media screen and (max-width: 1350px) {
+      main section .login-contenedor .info-contenedor {
+        width: 40%;
+        padding: 30px;
+        border-radius: 5px;
+        background-color: aliceblue; } }
+    @media screen and (max-width: 729px) {
+      main section .login-contenedor .info-contenedor {
+        width: 70%;
+        padding: 30px;
+        border-radius: 5px;
+        background-color: aliceblue; } }
     main section .login-contenedor .info-contenedor .formas {
       display: flex;
       justify-content: space-evenly; }
@@ -201,34 +315,34 @@ main section .login-contenedor {
           main section .login-contenedor .info-contenedor .formas .elemento-log a img {
             padding-right: 7px;
             text-align: center; }
-      main section .login-contenedor .info-contenedor .formas .inputs-contenedor .inputs-login {
-        display: flex;
-        flex-direction: column;
-        margin-top: 50px;
-        margin-bottom: 30px;
+    main section .login-contenedor .info-contenedor .inputs-contenedor .inputs-login {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      width: 100%;
+      gap: 20px; }
+      main section .login-contenedor .info-contenedor .inputs-contenedor .inputs-login input {
         width: 100%;
-        gap: 20px; }
-        main section .login-contenedor .info-contenedor .formas .inputs-contenedor .inputs-login input {
-          width: 100%;
-          border: none;
-          padding: 7px;
-          border-radius: 8px;
-          outline: none; }
-      main section .login-contenedor .info-contenedor .formas .inputs-contenedor p a {
-        text-decoration: none; }
-      main section .login-contenedor .info-contenedor .formas .inputs-contenedor button {
-        width: 90%;
         border: none;
-        padding: 5px;
-        border-radius: 4px;
-        background-color: rgba(112, 149, 180, 0.466);
-        transition: 0.1s; }
-        main section .login-contenedor .info-contenedor .formas .inputs-contenedor button:hover {
-          background-color: rgba(112, 149, 180, 0.822); }
-      main section .login-contenedor .info-contenedor .formas .img-footer {
-        height: 437px;
-        border-radius: 6px;
-        width: 640px; }
+        padding: 7px;
+        border-radius: 8px;
+        outline: none; }
+    main section .login-contenedor .info-contenedor .inputs-contenedor p a {
+      text-decoration: none; }
+    main section .login-contenedor .info-contenedor .inputs-contenedor button {
+      width: 90%;
+      border: none;
+      padding: 5px;
+      border-radius: 4px;
+      background-color: rgba(112, 149, 180, 0.466);
+      transition: 0.1s; }
+      main section .login-contenedor .info-contenedor .inputs-contenedor button:hover {
+        background-color: rgba(112, 149, 180, 0.822); }
+    main section .login-contenedor .info-contenedor .inputs-contenedor .img-footer {
+      height: 437px;
+      border-radius: 6px;
+      width: 640px; }
 
 section .contenedor-deportes .futbol-info h2 {
   text-align: center;
@@ -241,6 +355,14 @@ section .contenedor-deportes .futbol-info .contenedor-general {
   margin-left: 100px;
   margin-right: 100px;
   gap: 50px; }
+  @media screen and (max-width: 1270px) {
+    section .contenedor-deportes .futbol-info .contenedor-general {
+      display: flex;
+      justify-content: center;
+      margin-left: 100px;
+      margin-right: 100px;
+      gap: 50px;
+      flex-direction: column-reverse; } }
   section .contenedor-deportes .futbol-info .contenedor-general .texto h3 {
     text-align: center; }
 
@@ -251,14 +373,26 @@ section .contenedor-deportes .contenedor {
   margin-right: 100px;
   gap: 50px;
   padding-bottom: 100px; }
+  @media screen and (max-width: 1270px) {
+    section .contenedor-deportes .contenedor {
+      display: flex;
+      justify-content: center;
+      margin-left: 100px;
+      margin-right: 100px;
+      gap: 50px;
+      padding-bottom: 100px;
+      flex-direction: column; } }
   section .contenedor-deportes .contenedor .texto h3 {
     text-align: center; }
 
-section .nosotros-principal {
+main section .nosotros-principal {
   background-image: url("../img/matheus-ferrero-TkrRvwxjb_8-unsplash (1).jpg");
   height: 350px;
-  background-position: center; }
-  section .nosotros-principal h1 {
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  main section .nosotros-principal h1 {
     color: aliceblue;
     text-align: center;
     display: flex;
@@ -268,7 +402,7 @@ section .nosotros-principal {
     border-radius: 7px;
     margin-bottom: 80px; }
 
-section .nosotros-container .nosotros.info {
+main section .nosotros-container .nosotros-info {
   margin-right: 100px;
   display: flex;
   justify-content: center;
@@ -276,11 +410,32 @@ section .nosotros-container .nosotros.info {
   padding-top: 70px;
   padding-bottom: 120px;
   gap: 60px; }
-  section .nosotros-container .nosotros.info .texto-mision h2 {
+  @media screen and (max-width: 1350px) {
+    main section .nosotros-container .nosotros-info {
+      margin: 60px;
+      display: flex;
+      justify-content: center;
+      padding-top: 70px;
+      padding-bottom: 120px;
+      gap: 60px;
+      flex-direction: column; } }
+  @media screen and (max-width: 729px) {
+    main section .nosotros-container .nosotros-info {
+      width: 100%;
+      border-radius: 9px; } }
+  @media screen and (max-width: 729px) {
+    main section .nosotros-container .nosotros-info .texto-mision {
+      width: 50%; } }
+  main section .nosotros-container .nosotros-info .texto-mision h2 {
     padding-top: 50px; }
-  section .nosotros-container .nosotros.info img {
+  main section .nosotros-container .nosotros-info .texto-mision p {
+    flex-direction: column; }
+  main section .nosotros-container .nosotros-info img {
     width: 600px;
     border-radius: 9px; }
+    @media screen and (max-width: 729px) {
+      main section .nosotros-container .nosotros-info img {
+        display: none; } }
 
 footer {
   background: linear-gradient(white, 85%, grey); }
@@ -290,6 +445,14 @@ footer {
     display: flex;
     justify-content: space-evenly;
     font-family: 'Open Sans', sans-serif; }
+    @media screen and (max-width: 1143px) {
+      footer .contenedor-footer {
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: 'Open Sans', sans-serif;
+        flex-direction: column; } }
     footer .contenedor-footer h3 {
       font-weight: 600;
       font-size: 25px;
@@ -297,6 +460,12 @@ footer {
     footer .contenedor-footer p {
       width: 100%;
       max-width: 600px; }
+      @media screen and (max-width: 1143px) {
+        footer .contenedor-footer p {
+          width: 100%;
+          max-width: 600px;
+          margin: 30px;
+          padding-right: 30px; } }
     footer .contenedor-footer ul {
       list-style: none; }
       footer .contenedor-footer ul li a {
@@ -304,152 +473,3 @@ footer {
         color: black; }
   footer .redes-sociales h3 {
     color: aliceblue; }
-
-@media screen and (max-width: 1270px) {
-  .galeria .imagenes-galeria {
-    gap: 20px;
-    display: grid;
-    grid-template-columns: 33.3% 29% 35.2%;
-    grid-template-rows: 450px 450px 450px;
-    padding: 60px;
-    flex-wrap: wrap;
-    flex-direction: column; }
-    .galeria .imagenes-galeria .grid-item .grid-img {
-      flex-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-    .galeria .imagenes-galeria .grid-item .grid-item:nth-child(2) {
-      grid-column-start: span 2; }
-    .galeria .imagenes-galeria .grid-item .grid-item:nth-child(7) {
-      grid-column-start: span 3; } }
-
-@media screen and (max-width: 857px) {
-  .imagenes-galeria {
-    gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 300px 300px 300px;
-    padding: 20px;
-    flex-wrap: wrap;
-    flex-direction: column; }
-    .imagenes-galeria .grid-item .grid-img {
-      flex-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; } }
-
-@media screen and (max-width: 391px) {
-  .imagenes-galeria {
-    gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 300px 300px 300px;
-    padding: 20px;
-    flex-wrap: wrap;
-    flex-direction: column; }
-    .imagenes-galeria .grid-item .grid-img {
-      flex-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  .grid-img {
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-  main .barra {
-    background-color: #baeef7;
-    position: static; }
-    main .barra ul {
-      margin-right: 2rem;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      flex-direction: column;
-      text-align: center; }
-      main .barra ul li {
-        margin: 10px;
-        text-decoration: none;
-        transition: 1s; }
-        main .barra ul li a {
-          text-decoration: none;
-          color: #413d3d;
-          font-size: large;
-          font-weight: 500px;
-          font-weight: 600; } }
-
-@media screen and (max-width: 445px) {
-  main .contactanos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px; }
-    main .contactanos .contenedor-contacto {
-      width: 100%;
-      background: #f1f1f1;
-      padding: 30px 40px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 0 20px #000000b3; } }
-
-@media screen and (max-width: 1350px) {
-  section .login-contenedor {
-    padding-top: 100px;
-    padding-bottom: 11rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
-    width: 100%;
-    flex-direction: column; }
-    section .login-contenedor .info-contenedor {
-      width: 40%;
-      padding: 30px;
-      border-radius: 5px;
-      background-color: aliceblue; }
-      section .login-contenedor .info-contenedor .img-footer {
-        height: 437px;
-        border-radius: 6px;
-        width: 640px;
-        display: none; } }
-
-@media screen and (max-width: 1230px) {
-  section .contendor-deportes .futbol-info .contenedor-general {
-    display: flex;
-    justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    gap: 50px;
-    flex-direction: column-reverse; }
-  section .contendor-deportes .contenedor {
-    display: flex;
-    justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    gap: 50px;
-    padding-bottom: 100px;
-    flex-direction: column; } }
-
-@media screen and (max-width: 1339px) {
-  section .nosotros-container .nosotros-info {
-    margin-right: 100px;
-    display: flex;
-    justify-content: center;
-    margin-left: 100px;
-    padding-top: 70px;
-    padding-bottom: 120px;
-    gap: 60px;
-    flex-direction: column; } }
-
-@media screen and (max-width: 729px) {
-  section .nosotros-container .nosotros-info img {
-    width: 100%;
-    border-radius: 9px; } }
-
-@media screen and (max-width: 729px) {
-  section .nosotros-container .nosotros-info img {
-    width: 100%;
-    border-radius: 9px; } }

@@ -15,3 +15,8 @@ $widht-principal: 100%;
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin flex2 ($flex, $justify,){
+    display: $flex;
+    justify-content: $justify;
+}

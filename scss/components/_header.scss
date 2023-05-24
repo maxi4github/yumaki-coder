@@ -47,9 +47,10 @@
         @extend %flex;
         flex-direction: column;
         width: $widht-principal;
-        h2{
-            font-size: 60px;
+        h1{
+            font-size: 50px;
             font-family: "DynaPuff", cursive;
+            text-align: center;
         }
 
         }
@@ -61,35 +62,41 @@
 }
 
 header{
-    .navbar{
-        nav{
-            .container-fluid{
-                @include flex (flex, space-between);
-                .navbar-brand{
-                    color: aliceblue;
-                    text-decoration: none;
-                    font-size: 40px;
-                    padding: 10px;
-                    font-family: "DynaPuff", cursive;
-                    transition: 0.1s;
-                    &:hover{
-                        transform: scale(1.1);
-                    }
-                    img{
-                        width: 40px;
-                    }
-                    
-                    .navbar-text{
-                        &:hover{
-                            color: black;
-                            transform: scale(1.1);
-                        }                        
-                        a{
-                            text-decoration: none;
-                        }
-                    }
-                }
+    .container-fluid{
+        display: flex;
+        justify-content: space-between;
+        .navbar-brand{
+            text-decoration: none;
+            font-size: 30px;
+            padding: 10px;
+            font-family: "DynaPuff", cursive;
+            transition: 0.1s;
+            &:hover{
+                transform:scale(1.1);
+            }
+            img{
+                width: 40px;
             }
         }
+    .navbar-collapse{
+        .navbar-text{
+            margin: 10px;
+            text-decoration: none;
+            background-color: rgb(173, 191, 207);
+            color: black;
+            padding: 9px;
+            font-size: large;
+            border-radius: 9px;
+            transition: 0.1s;
+            &:hover{
+                color: black;
+                transform: scale(1.1);
+            }
+
+        }
+        a{
+            text-decoration: none;
+        }
+    }
     }
 }

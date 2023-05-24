@@ -5,8 +5,17 @@ footer{
     .contenedor-footer{
         margin-top: 40px;
         width: $widht-principal;
-        @include flex (flex, space-evenly);
+        @include flex2 (flex, space-evenly);
         font-family: 'Open Sans', sans-serif;
+
+        @include res5 {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            font-family: 'Open Sans', sans-serif;
+            flex-direction: column;
+        }
         h3{
             font-weight:600;
             font-size: 25px;
@@ -16,6 +25,13 @@ footer{
         p{
             width: $widht-principal;
             max-width: 600px;
+
+            @include res5 {
+                width: 100%;
+                max-width: 600px;
+                margin: 30px;
+                padding-right: 30px;
+            }
         }
 
         ul{
