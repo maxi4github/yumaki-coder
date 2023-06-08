@@ -347,7 +347,8 @@ main section .login-contenedor {
 section .contenedor-deportes .futbol-info h2 {
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif; }
 
 section .contenedor-deportes .futbol-info .contenedor-general {
   display: flex;
@@ -364,7 +365,11 @@ section .contenedor-deportes .futbol-info .contenedor-general {
       gap: 50px;
       flex-direction: column-reverse; } }
   section .contenedor-deportes .futbol-info .contenedor-general .texto h3 {
-    text-align: center; }
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px; }
+  section .contenedor-deportes .futbol-info .contenedor-general .texto p {
+    font-family: sans-serif; }
 
 section .contenedor-deportes .contenedor {
   display: flex;
@@ -383,7 +388,11 @@ section .contenedor-deportes .contenedor {
       padding-bottom: 100px;
       flex-direction: column; } }
   section .contenedor-deportes .contenedor .texto h3 {
-    text-align: center; }
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px; }
+  section .contenedor-deportes .contenedor .texto p {
+    font-family: sans-serif; }
 
 main section .nosotros-principal {
   background-image: url("../img/matheus-ferrero-TkrRvwxjb_8-unsplash (1).jpg");
@@ -427,9 +436,11 @@ main section .nosotros-container .nosotros-info {
     main section .nosotros-container .nosotros-info .texto-mision {
       width: 50%; } }
   main section .nosotros-container .nosotros-info .texto-mision h2 {
-    padding-top: 50px; }
+    padding-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
   main section .nosotros-container .nosotros-info .texto-mision p {
-    flex-direction: column; }
+    flex-direction: column;
+    font-family: sans-serif; }
   main section .nosotros-container .nosotros-info img {
     width: 600px;
     border-radius: 9px; }
